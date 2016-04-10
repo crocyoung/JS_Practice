@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>regExp.html</title>	
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+<script>
+/*
+[abc]	查找方括号之间的任何字符。
+[0-9]	查找任何从 0 至 9 的数字。
+n{X}	匹配包含 X 个 n 的序列的字符串。
+*/
+
+//      1 + {3,5,7,8} + { 9 digits }
+var str = "1adaafafafe1307557856055152019593635ddddd888eeee";
+var pattern = "1[3578][0-9]{9}";
+// return the number corresponding the pattern
+// 加了 "g" 全文搜索
+var phonePatt = new RegExp(pattern, "g"); 
+
+while((result = phonePatt.exec(str)) != null){
+document.write(result);
+document.write("&nbsp");
+}
+
+</script>
+    
+
+  </head>
+  
+  <body>
+
+  </body>
+</html>

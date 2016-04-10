@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>functions.html</title>
+    <meta name="content-type" content="text/html; charset=UTF-8">
+<script>
+     
+    function traverse(arr){
+    for(i in arr){
+    document.write(arr[i] + "&nbsp");
+    }
+    };
+    
+    function findMax(arr){
+    var max = arr[0];
+    for(i in arr){
+    max = arr[i] > max? arr[i]:max;
+    }
+    document.write(max);
+    };
+    
+    function sort(arr){
+    for(var i=1 ; i<arr.length ; i++){
+      for(var j = 0; j< arr.length-1 ; j++){
+      if(arr[j] > arr[j+1]){
+      var temp = arr[j+1];
+      arr[j+1] = arr[j];
+      arr[j] = temp;
+      }
+      }
+    }
+    
+    traverse(arr);
+    }
+    
+    
+    var arr1 = [1, 2, 3, 5, "hhhhh"]; 
+    traverse(arr1);
+    
+    document.write("<br/>");
+    var arr2 = new Array(1, 200, 3, 5, 100);
+    findMax(arr2);
+    
+    document.write("<br/>");
+    var arr3 = new Array(300, 200, 3, 5, 100);
+    sort(arr3);
+    document.write(arr3.toString());
+
+/*   
+    for(var i=0 ; i<arr.length ; i++){
+    document.write(arr[i] + "," +"&nbsp");
+    }
+    
+    document.write("<br/>");
+    
+    // i 只是下标 
+    for(i in arr){
+    document.write("位置"+i + ":" + arr2[i] + "," +"&nbsp");
+    }
+ */
+    
+</script>
+
+  </head>
+  
+  <body>
+
+  </body>
+</html>

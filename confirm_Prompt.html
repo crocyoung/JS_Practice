@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="content-type" content="text/html; charset=UTF-8">
+        <title>javaScript.html</title>
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    
+    <script type = "text/javascript">
+    
+    
+    var a = 3;
+    var b = 5;
+    var c = b>a? b : a;
+    //alert(c);
+    
+    // confirm alert
+    var isComfirmed = window.confirm("delete or not");
+    alert(isComfirmed);
+    
+    
+    //  prompt
+    //  return default value/ inputvalue/ null  
+    var inputValue = window.prompt("input value", "5");
+    alert(typeof(inputValue));
+    // parse
+    var inputInt = parseInt(inputValue);
+    
+    switch(inputInt){
+    case 1:
+    alert("This is 1");
+    break;
+    
+    case 2:
+    alert("This is 2");
+    break;  
+    }
+ 
+   document.write("<font color='red'>");
+   document.write("table");
+   document.write("</font>");
+  
+   document.write("<table>");
+    for(var i=1 ; i<10 ; i++){
+	    document.write("<tr>");
+	    for(var j=1 ; j<=i ; j++){
+	    document.write("<td>");
+	    document.write( i +"*"+ j+ "=" + i*j + "&nbsp");
+	    document.write("</td>");
+	    }
+	   document.write("</tr>");
+    }
+    document.write("</table>");
+    
+    
+    </script>
+
+  </head>
+  
+  <body>
+    This is my HTML page. <br>
+  </body>
+</html>
